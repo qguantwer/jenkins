@@ -28,7 +28,7 @@
 
 - (void)testExample
 {
-
+    XCTAssertTrue(NO, @"Test assert true.");
 }
 
 @end
