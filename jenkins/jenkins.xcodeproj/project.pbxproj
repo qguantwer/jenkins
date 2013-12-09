@@ -21,6 +21,7 @@
 		49BD5ADD185568D40042E51C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BD5ABF185568D30042E51C /* UIKit.framework */; };
 		49BD5AE5185568D40042E51C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49BD5AE3185568D40042E51C /* InfoPlist.strings */; };
 		49BD5AE7185568D40042E51C /* jenkinsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BD5AE6185568D40042E51C /* jenkinsTests.m */; };
+		49BD5AF3185595AE0042E51C /* JKMyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BD5AF2185595AE0042E51C /* JKMyTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		49BD5AE2185568D40042E51C /* jenkinsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "jenkinsTests-Info.plist"; sourceTree = "<group>"; };
 		49BD5AE4185568D40042E51C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49BD5AE6185568D40042E51C /* jenkinsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jenkinsTests.m; sourceTree = "<group>"; };
+		49BD5AF2185595AE0042E51C /* JKMyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMyTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				49BD5AE6185568D40042E51C /* jenkinsTests.m */,
+				49BD5AF2185595AE0042E51C /* JKMyTests.m */,
 				49BD5AE1185568D40042E51C /* Supporting Files */,
 			);
 			path = jenkinsTests;
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BD5AF3185595AE0042E51C /* JKMyTests.m in Sources */,
 				49BD5AE7185568D40042E51C /* jenkinsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +465,7 @@
 				49BD5AEC185568D40042E51C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49BD5AED185568D40042E51C /* Build configuration list for PBXNativeTarget "jenkinsTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +474,7 @@
 				49BD5AEF185568D40042E51C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
