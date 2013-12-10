@@ -22,6 +22,7 @@
 		49BD5AE5185568D40042E51C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49BD5AE3185568D40042E51C /* InfoPlist.strings */; };
 		49BD5AE7185568D40042E51C /* jenkinsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BD5AE6185568D40042E51C /* jenkinsTests.m */; };
 		49BD5AF3185595AE0042E51C /* JKMyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BD5AF2185595AE0042E51C /* JKMyTests.m */; };
+		49BD5AF51856A95E0042E51C /* GcovTestObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BD5AF41856A95E0042E51C /* GcovTestObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		49BD5AE4185568D40042E51C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49BD5AE6185568D40042E51C /* jenkinsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jenkinsTests.m; sourceTree = "<group>"; };
 		49BD5AF2185595AE0042E51C /* JKMyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMyTests.m; sourceTree = "<group>"; };
+		49BD5AF41856A95E0042E51C /* GcovTestObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GcovTestObserver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				49BD5AE6185568D40042E51C /* jenkinsTests.m */,
 				49BD5AF2185595AE0042E51C /* JKMyTests.m */,
 				49BD5AE1185568D40042E51C /* Supporting Files */,
+				49BD5AF41856A95E0042E51C /* GcovTestObserver.m */,
 			);
 			path = jenkinsTests;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				49BD5AF3185595AE0042E51C /* JKMyTests.m in Sources */,
 				49BD5AE7185568D40042E51C /* jenkinsTests.m in Sources */,
+				49BD5AF51856A95E0042E51C /* GcovTestObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +331,8 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -366,6 +372,8 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -383,6 +391,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "jenkins/jenkins-Prefix.pch";
 				INFOPLIST_FILE = "jenkins/jenkins-Info.plist";
@@ -396,6 +406,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "jenkins/jenkins-Prefix.pch";
 				INFOPLIST_FILE = "jenkins/jenkins-Info.plist";
@@ -414,6 +426,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "jenkins/jenkins-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -437,6 +450,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "jenkins/jenkins-Prefix.pch";
 				INFOPLIST_FILE = "jenkinsTests/jenkinsTests-Info.plist";
