@@ -168,6 +168,7 @@
 				49BD5AB4185568D30042E51C /* Sources */,
 				49BD5AB5185568D30042E51C /* Frameworks */,
 				49BD5AB6185568D30042E51C /* Resources */,
+				49ADD0891856FC0400AEFC7F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -185,6 +186,7 @@
 				49BD5AD5185568D40042E51C /* Sources */,
 				49BD5AD6185568D40042E51C /* Frameworks */,
 				49BD5AD7185568D40042E51C /* Resources */,
+				49ADD08A1856FDE700AEFC7F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +252,35 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49ADD0891856FC0400AEFC7F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./XcodeCoverage/exportenv.sh;
+		};
+		49ADD08A1856FDE700AEFC7F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./XcodeCoverage/runGetcov.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49BD5AB4185568D30042E51C /* Sources */ = {
@@ -426,7 +457,8 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "jenkins/jenkins-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
