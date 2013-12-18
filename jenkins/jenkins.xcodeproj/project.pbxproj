@@ -23,6 +23,7 @@
 		49BD5AE7185568D40042E51C /* jenkinsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BD5AE6185568D40042E51C /* jenkinsTests.m */; };
 		49BD5AF3185595AE0042E51C /* JKMyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BD5AF2185595AE0042E51C /* JKMyTests.m */; };
 		49BD5AF51856A95E0042E51C /* GcovTestObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BD5AF41856A95E0042E51C /* GcovTestObserver.m */; };
+		49C8264A18618864006E410F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C8264918618864006E410F /* libOCMock.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,13 @@
 		49BD5AE6185568D40042E51C /* jenkinsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jenkinsTests.m; sourceTree = "<group>"; };
 		49BD5AF2185595AE0042E51C /* JKMyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMyTests.m; sourceTree = "<group>"; };
 		49BD5AF41856A95E0042E51C /* GcovTestObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GcovTestObserver.m; sourceTree = "<group>"; };
+		49C8264218618864006E410F /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		49C8264318618864006E410F /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		49C8264418618864006E410F /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		49C8264518618864006E410F /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		49C8264618618864006E410F /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		49C8264718618864006E410F /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		49C8264918618864006E410F /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49BD5ADB185568D40042E51C /* XCTest.framework in Frameworks */,
+				49C8264A18618864006E410F /* libOCMock.a in Frameworks */,
 				49BD5ADD185568D40042E51C /* UIKit.framework in Frameworks */,
 				49BD5ADC185568D40042E51C /* Foundation.framework in Frameworks */,
 			);
@@ -86,6 +95,7 @@
 		49BD5AAF185568D30042E51C = {
 			isa = PBXGroup;
 			children = (
+				49C8263F18618864006E410F /* usr */,
 				49BD5AC1185568D30042E51C /* jenkins */,
 				49BD5AE0185568D40042E51C /* jenkinsTests */,
 				49BD5ABA185568D30042E51C /* Frameworks */,
@@ -156,6 +166,44 @@
 				49BD5AE3185568D40042E51C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49C8263F18618864006E410F /* usr */ = {
+			isa = PBXGroup;
+			children = (
+				49C8264018618864006E410F /* include */,
+				49C8264818618864006E410F /* lib */,
+			);
+			path = usr;
+			sourceTree = "<group>";
+		};
+		49C8264018618864006E410F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				49C8264118618864006E410F /* OCMock */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		49C8264118618864006E410F /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				49C8264218618864006E410F /* NSNotificationCenter+OCMAdditions.h */,
+				49C8264318618864006E410F /* OCMArg.h */,
+				49C8264418618864006E410F /* OCMConstraint.h */,
+				49C8264518618864006E410F /* OCMock.h */,
+				49C8264618618864006E410F /* OCMockObject.h */,
+				49C8264718618864006E410F /* OCMockRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
+		49C8264818618864006E410F /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				49C8264918618864006E410F /* libOCMock.a */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,14 +317,14 @@
 		};
 		49ADD08A1856FDE700AEFC7F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = ./XcodeCoverage/runGetcov.sh;
 		};
@@ -465,7 +513,24 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/usr/include",
+				);
 				INFOPLIST_FILE = "jenkinsTests/jenkinsTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/usr/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"$(SRCROOT)/usr/lib/libOCMock.a",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -485,7 +550,16 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "jenkins/jenkins-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/usr/include",
+				);
 				INFOPLIST_FILE = "jenkinsTests/jenkinsTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/usr/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
