@@ -30,12 +30,14 @@
 - (void)testExample
 {
     XCTAssertTrue(YES, @"Test assert true.");
+    
     id arrayMock = [OCMockObject mockForClass:[NSArray class]];
+    
     [[[arrayMock stub] andReturn:@"test stub"] lastObject];
     XCTAssert([[arrayMock lastObject] isEqualToString:@"test stub"], @"test stub");
     
-    [[arrayMock expect] isEqualToArray:@[@"test stub"]];
-    [arrayMock isEqualToArray:@[@"test stub"]];
+    [[arrayMock expect] isEqualToArray:@[@"test mock"]];
+    [arrayMock isEqualToArray:@[@"test mock"]];
     [arrayMock verify];
 }
 
